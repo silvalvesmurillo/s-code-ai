@@ -24,15 +24,11 @@ class HttpCatServiceImpl(private val client: HttpClient) : HttpCatService {
     }
     
     override suspend fun fetchAllStatuses(): List<HttpCatStatus> {
-        val result = mutableListOf<HttpCatStatus>()
-        
-        for (code in COMMON_STATUS_CODES) {
-            if (imageExists(code)) {
-                result.add(HttpCatStatus(code, "$BASE_URL/$code"))
-            }
+        // For Android, we'll return all known status codes without checking
+        // HEAD requests can be slow and the images are almost always available
+        return COMMON_STATUS_CODES.map { code ->
+            HttpCatStatus(code, "$BASE_URL/$code")
         }
-        
-        return result
     }
     
     override suspend fun imageExists(code: Int): Boolean {
