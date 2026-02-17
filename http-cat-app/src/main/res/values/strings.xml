@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HTTP Cat</string>
+    <string name="loading">Loading HTTP Cat images...</string>
+    <string name="error_loading">Error loading images</string>
+    <string name="no_images">No HTTP cat images available</string>
+    <string name="retry">Retry</string>
+</resources>

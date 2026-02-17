@@ -85,3 +85,17 @@ Cargo.lock
 .parcel-cache/
 .next/
 .nuxt/
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+.externalNativeBuild/
+.cxx/
+local.properties
+captures/
+.navigation/
+output.json
+*.iml
+.kotlin/
