@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var httpCatService: HttpCatService
     private lateinit var httpClient: HttpClient
     
+    @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
