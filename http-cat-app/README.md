@@ -45,6 +45,7 @@ http-cat-app/
 
 - Java 17 ou superior
 - Gradle 9.3.1 (ou use o wrapper incluído)
+- Conexão com a internet (para acessar https://http.cat)
 
 ### Executar a Aplicação
 
