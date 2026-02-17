@@ -8,8 +8,7 @@
 - **IDE**: VS Code, Visual Studio, JetBrains, or other Copilot-supported IDE
 
 ### Optional but Recommended
-- **Node.js**: For JavaScript/TypeScript examples
-- **Python**: For Python examples
+- **Programming Language Tools**: Install tools for your preferred language (Node.js, Python, Go, etc.)
 - **Docker**: For containerized development
 
 ## Installation
@@ -66,27 +65,15 @@ Enable Copilot Chat for interactive assistance:
 
 ### 1. Test Copilot
 
-Create a new file `test.js`:
+Create a new file in your preferred language (e.g., `test.py`, `test.js`, `test.go`):
 
-```javascript
-// Function to calculate the factorial of a number
-function factorial(n) {
-  // Copilot should suggest the implementation
+```python
+# Function to calculate the factorial of a number
+def factorial(n):
+    # Copilot should suggest the implementation
 ```
 
-Copilot should suggest code completion.
-
-### 2. Run Example Tests
-
-```bash
-cd examples
-node email-validator.test.js
-```
-
-You should see:
-```
-✅ All tests passed!
-```
+Copilot should suggest code completion. Press Tab to accept suggestions.
 
 ## Project Structure
 
@@ -103,9 +90,7 @@ s-code-ai/
 │   ├── getting-started.md           # This file
 │   └── best-practices.md            # AI development best practices
 ├── examples/
-│   ├── README.md                     # Examples overview
-│   ├── email-validator.js           # Example code
-│   └── email-validator.test.js      # Example tests
+│   └── README.md                     # Examples overview
 └── src/
     └── (your project code)
 ```
@@ -117,11 +102,9 @@ s-code-ai/
 - [Review Guidelines](../.github/copilot-review-guidelines.md)
 - [Best Practices](./best-practices.md)
 
-### 2. Try the Examples
-```bash
-cd examples
-node email-validator.test.js
-```
+### 2. Explore the Guidelines
+- Review [Copilot Instructions](../.github/copilot-instructions.md) for project standards
+- Check [Examples](../examples/) directory for guidance on creating examples
 
 ### 3. Create Your First Feature
 
