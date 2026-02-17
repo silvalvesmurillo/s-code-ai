@@ -7,6 +7,7 @@ Este é um projeto de desenvolvimento orientado por IA que aproveita o GitHub Co
 
 ### Princípios Gerais
 - Escreva código limpo, sustentável e bem documentado
+- Escreva nome de metódos/classes apenas em ingl6es
 - Siga os princípios SOLID e padrões de design
 - Prefira composição em vez de herança
 - Mantenha as funções pequenas e focadas (responsabilidade única)
@@ -15,11 +16,14 @@ Este é um projeto de desenvolvimento orientado por IA que aproveita o GitHub Co
 ### Documentação
 - Adicione KDoc para todas as funções e classes públicas
 - Inclua comentários inline para lógica complexa
+- Documentaçao de código (KDOC/JAVADOC) apenas em inglês
 - Mantenha arquivos README atualizados em cada diretório principal
 - Documente endpoints de API com exemplos de requisição/resposta
 
 ### Testes
 - Escreva testes unitários para todos os novos recursos
+- Teste apenas em inglês
+- Testes com padrão de nomenclatura `Given ... When ... Then ...`
 - Almeje pelo menos 80% de cobertura de código
 - Inclua testes de integração para fluxos críticos
 - Teste casos extremos e condições de erro
@@ -42,6 +46,7 @@ Este é um projeto de desenvolvimento orientado por IA que aproveita o GitHub Co
 
 ### Ao Revisar Código
 - Verifique possíveis bugs e casos extremos
+- Verifique se possui nomes e documentaçoes de código em inglês. O uso da linguagem é obrigatória
 - Verifique o tratamento adequado de erros
 - Garanta que o código segue as convenções do projeto
 - Procure vulnerabilidades de segurança
@@ -51,6 +56,7 @@ Este é um projeto de desenvolvimento orientado por IA que aproveita o GitHub Co
 ### Ao Gerar Código
 - Siga os padrões existentes no código
 - Gere testes abrangentes junto com a implementação
+- Garanta que possua nomes e documentaçoes de código em inglês. O uso da linguagem é obrigatória
 - Inclua tratamento adequado de erros
 - Adicione comentários e documentação significativos
 - Considere casos extremos e cenários de erro
