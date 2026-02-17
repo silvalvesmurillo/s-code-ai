@@ -19,7 +19,6 @@ out/
 *.swp
 *.swo
 *~
-.DS_Store
 
 # Environment variables
 .env
@@ -64,11 +63,12 @@ vendor/
 *.class
 *.jar
 *.war
-target/
 .gradle/
 
-# Rust
+# Build outputs (Java, Rust, and other languages)
 target/
+
+# Rust
 Cargo.lock
 
 # C/C++

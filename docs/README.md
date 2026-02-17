@@ -5,10 +5,9 @@ Welcome to the s-code-ai documentation!
 ## Table of Contents
 
 1. [Getting Started](./getting-started.md)
-2. [GitHub Copilot Setup](./copilot-setup.md)
-3. [Best Practices](./best-practices.md)
-4. [Examples](../examples/)
-5. [FAQ](./faq.md)
+2. [Best Practices](./best-practices.md)
+3. [Examples](../examples/)
+4. [FAQ](./faq.md)
 
 ## Quick Links
 
