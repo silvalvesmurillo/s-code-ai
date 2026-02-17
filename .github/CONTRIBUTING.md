@@ -1,148 +1,148 @@
-# Contributing Guide
+# Guia de Contribuição
 
-## Getting Started
+## Começando
 
-This project uses GitHub Copilot for AI-assisted development. Make sure you have:
+Este projeto usa o GitHub Copilot para desenvolvimento assistido por IA. Certifique-se de ter:
 
-1. GitHub Copilot enabled in your IDE
-2. Familiarity with the project's [Copilot Instructions](.github/copilot-instructions.md)
-3. Understanding of our [Review Guidelines](.github/copilot-review-guidelines.md)
+1. GitHub Copilot ativado na sua IDE
+2. Familiaridade com as [Instruções do Copilot](.github/copilot-instructions.md) do projeto
+3. Compreensão de nossas [Diretrizes de Revisão](.github/copilot-review-guidelines.md)
 
-## Development Workflow
+## Fluxo de Trabalho de Desenvolvimento
 
-### 1. Create a Branch
+### 1. Crie uma Branch
 ```bash
-git checkout -b feature/your-feature-name
+git checkout -b feature/nome-do-seu-recurso
 ```
 
-Follow our [branch naming conventions](.github/copilot-instructions.md#branch-naming-convention).
+Siga nossas [convenções de nomenclatura de branch](.github/copilot-instructions.md#convenção-de-nomenclatura-de-branch).
 
-### 2. Make Changes
-- Use GitHub Copilot to assist with code generation
-- Follow the project's coding standards
-- Write tests for your changes
-- Update documentation as needed
+### 2. Faça Mudanças
+- Use o GitHub Copilot para auxiliar na geração de código
+- Siga os padrões de codificação do projeto
+- Escreva testes para suas mudanças
+- Atualize a documentação conforme necessário
 
-### 3. Test Your Changes
+### 3. Teste Suas Mudanças
 ```bash
-# Run tests (once test framework is set up)
-npm test  # or yarn test, pytest, go test, etc.
+# Execute os testes (uma vez que o framework de teste esteja configurado)
+./gradlew test  # para Kotlin/Gradle
 ```
 
-### 4. Commit Your Changes
-Follow the [conventional commit format](.github/copilot-instructions.md#commit-message-format):
+### 4. Commit Suas Mudanças
+Siga o [formato de commit convencional](.github/copilot-instructions.md#formato-de-mensagem-de-commit):
 
 ```bash
 git add .
-git commit -m "feat(scope): add new feature"
+git commit -m "feat(escopo): adicionar novo recurso"
 ```
 
-### 5. Push and Create PR
+### 5. Push e Crie PR
 ```bash
-git push origin feature/your-feature-name
+git push origin feature/nome-do-seu-recurso
 ```
 
-Then create a Pull Request on GitHub.
+Então crie um Pull Request no GitHub.
 
-## Using GitHub Copilot
+## Usando o GitHub Copilot
 
-### For Code Generation
-1. Write a comment describing what you want
-2. Let Copilot suggest implementation
-3. Review and refine the suggestion
-4. Test the generated code
+### Para Geração de Código
+1. Escreva um comentário descrevendo o que você quer
+2. Deixe o Copilot sugerir a implementação
+3. Revise e refine a sugestão
+4. Teste o código gerado
 
-### For Code Review
-1. Open the PR in your IDE
-2. Use Copilot to review changes
-3. Ask questions about the code
-4. Request improvements
+### Para Revisão de Código
+1. Abra o PR na sua IDE
+2. Use o Copilot para revisar mudanças
+3. Faça perguntas sobre o código
+4. Solicite melhorias
 
-### Example Prompts
-- "Generate a function that validates email addresses"
-- "Write unit tests for this function"
-- "Refactor this code to improve readability"
-- "Add error handling to this async function"
-- "Review this PR for security issues"
+### Exemplos de Prompts
+- "Gerar uma função que valida endereços de email"
+- "Escrever testes unitários para esta função"
+- "Refatorar este código para melhorar legibilidade"
+- "Adicionar tratamento de erro a esta função assíncrona"
+- "Revisar este PR para problemas de segurança"
 
-## PR Review Process
+## Processo de Revisão de PR
 
-### Automated Checks
-When you create a PR, automated checks will:
-- Analyze code quality
-- Check for security issues
-- Verify test coverage
-- Post a review comment
+### Verificações Automatizadas
+Quando você cria um PR, verificações automatizadas irão:
+- Analisar qualidade do código
+- Verificar problemas de segurança
+- Verificar cobertura de testes
+- Postar um comentário de revisão
 
-### Manual Review
-- Address feedback from automated checks
-- Respond to reviewer comments
-- Update your PR as needed
+### Revisão Manual
+- Resolva feedback das verificações automatizadas
+- Responda aos comentários dos revisores
+- Atualize seu PR conforme necessário
 
-### Approval
-Once all checks pass and reviews are addressed:
-- Your PR will be approved
-- It can be merged
+### Aprovação
+Uma vez que todas as verificações passem e revisões sejam resolvidas:
+- Seu PR será aprovado
+- Pode ser merged
 
-## Best Practices
+## Melhores Práticas
 
-### Code Quality
-- Keep functions small and focused
-- Use meaningful names
-- Add comments for complex logic
-- Follow DRY (Don't Repeat Yourself)
+### Qualidade de Código
+- Mantenha funções pequenas e focadas
+- Use nomes significativos
+- Adicione comentários para lógica complexa
+- Siga DRY (Don't Repeat Yourself)
 
-### Testing
-- Write tests before or alongside code
-- Test edge cases
-- Aim for high coverage
-- Use descriptive test names
+### Testes
+- Escreva testes antes ou junto com o código
+- Teste casos extremos
+- Almeje alta cobertura
+- Use nomes de teste descritivos
 
-### Security
-- Never commit secrets
-- Validate all inputs
-- Use environment variables
-- Keep dependencies updated
+### Segurança
+- Nunca faça commit de secrets
+- Valide todas as entradas
+- Use variáveis de ambiente
+- Mantenha dependências atualizadas
 
-### Documentation
-- Update README for user-facing changes
-- Add code comments for maintainers
-- Document APIs and interfaces
-- Keep changelog updated
+### Documentação
+- Atualize README para mudanças voltadas ao usuário
+- Adicione comentários de código para mantenedores
+- Documente APIs e interfaces
+- Mantenha changelog atualizado
 
-## Getting Help
+## Obtendo Ajuda
 
-- Review [Copilot Instructions](.github/copilot-instructions.md)
-- Check [Review Guidelines](.github/copilot-review-guidelines.md)
-- Ask GitHub Copilot in your IDE
-- Reach out to maintainers
+- Revise [Instruções do Copilot](.github/copilot-instructions.md)
+- Confira [Diretrizes de Revisão](.github/copilot-review-guidelines.md)
+- Pergunte ao GitHub Copilot na sua IDE
+- Entre em contato com os mantenedores
 
-## Tools and Resources
+## Ferramentas e Recursos
 
-### IDE Setup
-- Install GitHub Copilot extension
-- Configure your IDE settings
-- Learn keyboard shortcuts
+### Configuração da IDE
+- Instale a extensão do GitHub Copilot
+- Configure as definições da sua IDE
+- Aprenda atalhos de teclado
 
-### Useful Commands
+### Comandos Úteis
 ```bash
-# Check code style
-npm run lint  # or your linter
+# Verificar estilo de código
+./gradlew ktlintCheck  # ou seu linter
 
-# Run tests
-npm test
+# Executar testes
+./gradlew test
 
-# Build project
-npm run build
+# Construir projeto
+./gradlew build
 
-# Start development server
-npm run dev
+# Iniciar servidor de desenvolvimento
+./gradlew run
 ```
 
-## Questions?
+## Perguntas?
 
-If you have questions:
-1. Check existing documentation
-2. Ask GitHub Copilot
-3. Open an issue
-4. Contact maintainers
+Se você tiver perguntas:
+1. Confira a documentação existente
+2. Pergunte ao GitHub Copilot
+3. Abra uma issue
+4. Entre em contato com os mantenedores

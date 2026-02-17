@@ -1,223 +1,223 @@
 # s-code-ai 🤖
 
-An AI-oriented development project powered by GitHub Copilot for intelligent code assistance and automated PR reviews.
+Um projeto de desenvolvimento orientado por IA alimentado pelo GitHub Copilot para assistência inteligente de código e revisões automatizadas de PR.
 
-## 🌟 Features
+## 🌟 Recursos
 
-- **GitHub Copilot Integration**: Comprehensive instructions for AI-assisted development
-- **Automated PR Reviews**: Workflow that automatically analyzes pull requests
-- **Code Quality Checks**: Built-in security and quality scanning
-- **Developer Guidelines**: Clear standards and best practices
-- **Review Automation**: AI-powered code review assistance
+- **Integração com GitHub Copilot**: Instruções abrangentes para desenvolvimento assistido por IA
+- **Revisões Automatizadas de PR**: Workflow que analisa automaticamente pull requests
+- **Verificações de Qualidade de Código**: Análise de segurança e qualidade integrada
+- **Diretrizes para Desenvolvedores**: Padrões e melhores práticas claras
+- **Automação de Revisão**: Assistência de revisão de código alimentada por IA
 
-## 🚀 Quick Start
+## 🚀 Início Rápido
 
-### Prerequisites
+### Pré-requisitos
 
-1. **GitHub Copilot Subscription**: Ensure you have GitHub Copilot enabled
-2. **IDE with Copilot**: Install GitHub Copilot extension in your IDE (VS Code, Visual Studio, JetBrains, etc.)
+1. **Assinatura do GitHub Copilot**: Certifique-se de ter o GitHub Copilot ativado
+2. **IDE com Copilot**: Instale a extensão do GitHub Copilot na sua IDE (VS Code, Visual Studio, JetBrains, etc.)
 
-### Setup
+### Configuração
 
-1. **Clone the repository**
+1. **Clone o repositório**
    ```bash
    git clone https://github.com/silvalvesmurillo/s-code-ai.git
    cd s-code-ai
    ```
 
-2. **Review the Copilot Instructions**
-   - Read [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
-   - Familiarize yourself with project guidelines
+2. **Revise as Instruções do Copilot**
+   - Leia [`.github/copilot-instructions.md`](.github/copilot-instructions.md)
+   - Familiarize-se com as diretrizes do projeto
 
-3. **Start Developing**
-   - Create a new branch
-   - Make your changes
-   - Let GitHub Copilot assist you
+3. **Comece a Desenvolver**
+   - Crie uma nova branch
+   - Faça suas alterações
+   - Deixe o GitHub Copilot ajudá-lo
 
-## 📖 Documentation
+## 📖 Documentação
 
-### For Developers
+### Para Desenvolvedores
 
-- **[Copilot Instructions](.github/copilot-instructions.md)**: Complete guide for using GitHub Copilot in this project
-- **[Review Guidelines](.github/copilot-review-guidelines.md)**: Detailed PR review criteria and processes
-- **[Contributing Guide](.github/CONTRIBUTING.md)**: How to contribute to this project
+- **[Instruções do Copilot](.github/copilot-instructions.md)**: Guia completo para usar o GitHub Copilot neste projeto
+- **[Diretrizes de Revisão](.github/copilot-review-guidelines.md)**: Critérios e processos detalhados de revisão de PR
+- **[Guia de Contribuição](.github/CONTRIBUTING.md)**: Como contribuir para este projeto
 
-### Key Files
+### Arquivos Principais
 
 ```
 .github/
-├── copilot-instructions.md      # Main Copilot configuration
-├── copilot-review-guidelines.md # PR review standards
-├── CONTRIBUTING.md              # Contribution guidelines
+├── copilot-instructions.md      # Configuração principal do Copilot
+├── copilot-review-guidelines.md # Padrões de revisão de PR
+├── CONTRIBUTING.md              # Diretrizes de contribuição
 └── workflows/
-    └── copilot-review.yml       # Automated PR review workflow
+    └── copilot-review.yml       # Workflow de revisão automatizada de PR
 ```
 
-## 🤖 Using GitHub Copilot
+## 🤖 Usando o GitHub Copilot
 
-### In Your IDE
+### Na Sua IDE
 
-1. **Code Generation**: Write comments describing what you need, and Copilot will suggest code
-   ```javascript
-   // Create a function that validates email addresses
-   // Copilot will suggest implementation
+1. **Geração de Código**: Escreva comentários descrevendo o que você precisa, e o Copilot sugerirá código
+   ```kotlin
+   // Criar uma função que valida endereços de email
+   // Copilot irá sugerir a implementação
    ```
 
-2. **Code Review**: Use Copilot Chat to review your changes
+2. **Revisão de Código**: Use o Copilot Chat para revisar suas mudanças
    ```
-   /review - Review current changes
-   /explain - Explain selected code
-   /fix - Suggest fixes for issues
-   ```
-
-3. **Testing**: Generate tests with Copilot
-   ```javascript
-   // Write unit tests for the above function
-   // Copilot will suggest comprehensive tests
+   /review - Revisar mudanças atuais
+   /explain - Explicar código selecionado
+   /fix - Sugerir correções para problemas
    ```
 
-### In Pull Requests
+3. **Testes**: Gere testes com o Copilot
+   ```kotlin
+   // Escrever testes unitários para a função acima
+   // Copilot irá sugerir testes abrangentes
+   ```
 
-When you create a PR:
-- ✅ Automated review workflow runs
-- 📊 PR statistics are posted
-- 🏷️ Labels are automatically added
-- 🔍 Code quality checks execute
-- 🔒 Security scans run
+### Em Pull Requests
 
-## 🛠️ Development Workflow
+Quando você cria um PR:
+- ✅ Workflow de revisão automatizada é executado
+- 📊 Estatísticas do PR são postadas
+- 🏷️ Labels são automaticamente adicionadas
+- 🔍 Verificações de qualidade de código são executadas
+- 🔒 Análises de segurança são executadas
 
-### 1. Create a Feature Branch
+## 🛠️ Fluxo de Trabalho de Desenvolvimento
+
+### 1. Criar uma Branch de Feature
 ```bash
-git checkout -b feature/your-feature
+git checkout -b feature/sua-feature
 ```
 
-### 2. Make Changes with Copilot
-- Use Copilot for code suggestions
-- Follow project guidelines
-- Write tests
-- Update documentation
+### 2. Fazer Mudanças com o Copilot
+- Use o Copilot para sugestões de código
+- Siga as diretrizes do projeto
+- Escreva testes
+- Atualize a documentação
 
-### 3. Commit Your Changes
+### 3. Commit Suas Mudanças
 ```bash
 git add .
-git commit -m "feat: add new feature"
+git commit -m "feat: adicionar novo recurso"
 ```
 
-### 4. Push and Create PR
+### 4. Push e Criar PR
 ```bash
-git push origin feature/your-feature
+git push origin feature/sua-feature
 ```
 
-### 5. Review Automated Feedback
-- Check workflow results
-- Address any issues
-- Update PR as needed
+### 5. Revisar Feedback Automatizado
+- Verifique os resultados do workflow
+- Resolva quaisquer problemas
+- Atualize o PR conforme necessário
 
-## 📋 Project Guidelines
+## 📋 Diretrizes do Projeto
 
-### Code Style
-- Clean, maintainable code
-- SOLID principles
-- Descriptive naming
-- Comprehensive documentation
+### Estilo de Código
+- Código limpo e manutenível
+- Princípios SOLID
+- Nomenclatura descritiva
+- Documentação abrangente
 
-### Testing
-- Unit tests for all features
-- 80%+ code coverage
-- Integration tests for critical paths
-- Edge case coverage
+### Testes
+- Testes unitários para todos os recursos
+- Cobertura de 80%+
+- Testes de integração para caminhos críticos
+- Cobertura de casos extremos
 
-### Security
-- No hardcoded secrets
-- Input validation
-- Environment variables for config
-- Regular dependency updates
+### Segurança
+- Sem secrets hardcoded
+- Validação de entrada
+- Variáveis de ambiente para configuração
+- Atualizações regulares de dependências
 
-### Documentation
-- JSDoc/docstrings for public APIs
-- Inline comments for complex logic
-- Updated README files
-- API documentation
+### Documentação
+- KDoc para APIs públicas
+- Comentários inline para lógica complexa
+- Arquivos README atualizados
+- Documentação de API
 
-## 🔄 CI/CD Integration
+## 🔄 Integração CI/CD
 
-The project includes GitHub Actions workflows:
+O projeto inclui workflows do GitHub Actions:
 
-- **PR Review**: Automated analysis and labeling
-- **Code Quality**: Style and quality checks
-- **Security Scan**: Vulnerability detection
+- **Revisão de PR**: Análise e rotulagem automatizadas
+- **Qualidade de Código**: Verificações de estilo e qualidade
+- **Análise de Segurança**: Detecção de vulnerabilidades
 
-## 🎯 Best Practices
+## 🎯 Melhores Práticas
 
-### Using AI Assistance
+### Usando Assistência de IA
 
-✅ **Do:**
-- Review Copilot suggestions before accepting
-- Test generated code thoroughly
-- Customize suggestions to match project style
-- Use Copilot for documentation and tests
+✅ **Faça:**
+- Revise as sugestões do Copilot antes de aceitar
+- Teste o código gerado minuciosamente
+- Personalize as sugestões para combinar com o estilo do projeto
+- Use o Copilot para documentação e testes
 
-❌ **Don't:**
-- Blindly accept all suggestions
-- Commit without understanding the code
-- Skip testing AI-generated code
-- Ignore project guidelines
+❌ **Não faça:**
+- Aceitar cegamente todas as sugestões
+- Fazer commit sem entender o código
+- Pular o teste de código gerado por IA
+- Ignorar as diretrizes do projeto
 
-### Code Review
+### Revisão de Código
 
-When reviewing PRs:
-1. Check automated feedback
-2. Review code changes manually
-3. Test functionality
-4. Verify documentation
-5. Ensure security best practices
+Ao revisar PRs:
+1. Verifique o feedback automatizado
+2. Revise as mudanças de código manualmente
+3. Teste a funcionalidade
+4. Verifique a documentação
+5. Garanta as melhores práticas de segurança
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-We welcome contributions! Please read our [Contributing Guide](.github/CONTRIBUTING.md) to get started.
+Aceitamos contribuições! Leia nosso [Guia de Contribuição](.github/CONTRIBUTING.md) para começar.
 
-### Quick Contribution Steps
+### Passos Rápidos de Contribuição
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-5. Address review feedback
+1. Faça fork do repositório
+2. Crie uma branch de feature
+3. Faça suas mudanças
+4. Envie um pull request
+5. Resolva o feedback de revisão
 
-## 📊 Project Status
+## 📊 Status do Projeto
 
-This project demonstrates AI-oriented development practices:
-- GitHub Copilot integration ✅
-- Automated PR reviews ✅
-- Code quality checks ✅
-- Security scanning ✅
-- Comprehensive documentation ✅
+Este projeto demonstra práticas de desenvolvimento orientadas por IA:
+- Integração com GitHub Copilot ✅
+- Revisões automatizadas de PR ✅
+- Verificações de qualidade de código ✅
+- Análise de segurança ✅
+- Documentação abrangente ✅
 
-## 🔗 Resources
+## 🔗 Recursos
 
 ### GitHub Copilot
-- [Copilot Documentation](https://docs.github.com/en/copilot)
-- [Copilot Best Practices](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/)
-- [Copilot Patterns](https://learn.microsoft.com/en-us/shows/introduction-to-github-copilot/)
+- [Documentação do Copilot](https://docs.github.com/pt/copilot)
+- [Melhores Práticas do Copilot](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/)
+- [Padrões do Copilot](https://learn.microsoft.com/pt-br/shows/introduction-to-github-copilot/)
 
-### Project Resources
+### Recursos do Projeto
 - [Issues](https://github.com/silvalvesmurillo/s-code-ai/issues)
 - [Pull Requests](https://github.com/silvalvesmurillo/s-code-ai/pulls)
-- [Discussions](https://github.com/silvalvesmurillo/s-code-ai/discussions)
+- [Discussões](https://github.com/silvalvesmurillo/s-code-ai/discussions)
 
-## 📝 License
+## 📝 Licença
 
-This project is open source. See LICENSE file for details.
+Este projeto é open source. Veja o arquivo LICENSE para detalhes.
 
-## 💬 Support
+## 💬 Suporte
 
-Need help?
-- 📖 Check the [documentation](.github/)
-- 💬 Ask GitHub Copilot in your IDE
-- 🐛 [Open an issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
-- 📧 Contact maintainers
+Precisa de ajuda?
+- 📖 Confira a [documentação](.github/)
+- 💬 Pergunte ao GitHub Copilot na sua IDE
+- 🐛 [Abra uma issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
+- 📧 Entre em contato com os mantenedores
 
 ---
 
-**Built with ❤️ and 🤖 by the AI-assisted development community**
+**Construído com ❤️ e 🤖 pela comunidade de desenvolvimento assistido por IA**

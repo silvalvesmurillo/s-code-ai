@@ -1,43 +1,43 @@
-# Examples
+# Exemplos
 
-This directory contains example code demonstrating AI-assisted development with GitHub Copilot.
+Este diretório contém código de exemplo demonstrando desenvolvimento assistido por IA com GitHub Copilot.
 
-## Available Examples
+## Exemplos Disponíveis
 
-### 1. Basic Code Generation
-See how to use GitHub Copilot for generating common code patterns.
+### 1. Geração Básica de Código
+Veja como usar o GitHub Copilot para gerar padrões de código comuns.
 
-### 2. Test Generation
-Examples of using Copilot to generate comprehensive test suites.
+### 2. Geração de Testes
+Exemplos de uso do Copilot para gerar suítes de teste abrangentes.
 
-### 3. Documentation
-Using Copilot to generate and maintain documentation.
+### 3. Documentação
+Usando o Copilot para gerar e manter documentação.
 
-### 4. Refactoring
-Examples of using Copilot to refactor and improve existing code.
+### 4. Refatoração
+Exemplos de uso do Copilot para refatorar e melhorar código existente.
 
-## How to Use
+## Como Usar
 
-Each example includes:
-- Source code with Copilot-friendly comments
-- Tests generated with Copilot
-- Documentation
-- Before/after comparisons
+Cada exemplo inclui:
+- Código fonte com comentários amigáveis ao Copilot
+- Testes gerados com Copilot
+- Documentação
+- Comparações antes/depois
 
-## Running Examples
+## Executando Exemplos
 
 ```bash
-# Navigate to an example directory
-cd examples/[example-name]
+# Navegue para um diretório de exemplo
+cd examples/[nome-do-exemplo]
 
-# Follow the README in that directory
+# Siga o README nesse diretório
 ```
 
-## Contributing Examples
+## Contribuindo Exemplos
 
-Have a great example of using Copilot? Share it!
+Tem um ótimo exemplo de uso do Copilot? Compartilhe!
 
-1. Create a new directory in `examples/`
-2. Add your code with clear comments
-3. Include a README explaining the example
-4. Submit a PR
+1. Crie um novo diretório em `examples/`
+2. Adicione seu código com comentários claros
+3. Inclua um README explicando o exemplo
+4. Envie um PR

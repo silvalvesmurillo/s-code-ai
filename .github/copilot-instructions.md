@@ -1,130 +1,130 @@
-# GitHub Copilot Instructions for s-code-ai
+# Instruções do GitHub Copilot para s-code-ai
 
-## Project Overview
-This is an AI-oriented development project that leverages GitHub Copilot for intelligent code assistance and automated PR reviews.
+## Visão Geral do Projeto
+Este é um projeto de desenvolvimento orientado por IA que aproveita o GitHub Copilot para assistência inteligente de código e revisões automatizadas de PR.
 
-## Code Style and Standards
+## Estilo de Código e Padrões
 
-### General Principles
-- Write clean, maintainable, and well-documented code
-- Follow SOLID principles and design patterns
-- Prefer composition over inheritance
-- Keep functions small and focused (single responsibility)
-- Use descriptive variable and function names
+### Princípios Gerais
+- Escreva código limpo, sustentável e bem documentado
+- Siga os princípios SOLID e padrões de design
+- Prefira composição em vez de herança
+- Mantenha as funções pequenas e focadas (responsabilidade única)
+- Use nomes descritivos para variáveis e funções
 
-### Documentation
-- Add JSDoc/docstrings for all public functions and classes
-- Include inline comments for complex logic
-- Maintain up-to-date README files in each major directory
-- Document API endpoints with request/response examples
+### Documentação
+- Adicione KDoc para todas as funções e classes públicas
+- Inclua comentários inline para lógica complexa
+- Mantenha arquivos README atualizados em cada diretório principal
+- Documente endpoints de API com exemplos de requisição/resposta
 
-### Testing
-- Write unit tests for all new features
-- Aim for at least 80% code coverage
-- Include integration tests for critical workflows
-- Test edge cases and error conditions
-- Use descriptive test names that explain the scenario
+### Testes
+- Escreva testes unitários para todos os novos recursos
+- Almeje pelo menos 80% de cobertura de código
+- Inclua testes de integração para fluxos críticos
+- Teste casos extremos e condições de erro
+- Use nomes de teste descritivos que expliquem o cenário
 
-### Security
-- Never commit secrets, API keys, or credentials
-- Validate and sanitize all user inputs
-- Use environment variables for configuration
-- Follow the principle of least privilege
-- Keep dependencies up to date
+### Segurança
+- Nunca faça commit de secrets, chaves de API ou credenciais
+- Valide e sanitize todas as entradas de usuário
+- Use variáveis de ambiente para configuração
+- Siga o princípio do menor privilégio
+- Mantenha as dependências atualizadas
 
 ### Performance
-- Optimize for readability first, then performance
-- Profile before optimizing
-- Avoid premature optimization
-- Use appropriate data structures and algorithms
+- Otimize para legibilidade primeiro, depois performance
+- Faça profile antes de otimizar
+- Evite otimização prematura
+- Use estruturas de dados e algoritmos apropriados
 
-## AI-Assisted Development Guidelines
+## Diretrizes de Desenvolvimento Assistido por IA
 
-### When Reviewing Code
-- Check for potential bugs and edge cases
-- Verify proper error handling
-- Ensure code follows project conventions
-- Look for security vulnerabilities
-- Suggest performance improvements where applicable
-- Validate test coverage
+### Ao Revisar Código
+- Verifique possíveis bugs e casos extremos
+- Verifique o tratamento adequado de erros
+- Garanta que o código segue as convenções do projeto
+- Procure vulnerabilidades de segurança
+- Sugira melhorias de performance quando aplicável
+- Valide a cobertura de testes
 
-### When Generating Code
-- Follow existing patterns in the codebase
-- Generate comprehensive tests alongside implementation
-- Include appropriate error handling
-- Add meaningful comments and documentation
-- Consider edge cases and error scenarios
+### Ao Gerar Código
+- Siga os padrões existentes no código
+- Gere testes abrangentes junto com a implementação
+- Inclua tratamento adequado de erros
+- Adicione comentários e documentação significativos
+- Considere casos extremos e cenários de erro
 
-### When Refactoring
-- Maintain backward compatibility where possible
-- Update related tests and documentation
-- Ensure no functionality is broken
-- Improve code readability and maintainability
+### Ao Refatorar
+- Mantenha compatibilidade retroativa quando possível
+- Atualize testes e documentação relacionados
+- Garanta que nenhuma funcionalidade seja quebrada
+- Melhore a legibilidade e manutenibilidade do código
 
-## Project-Specific Guidelines
+## Diretrizes Específicas do Projeto
 
-### Pull Request Requirements
-- All PRs must include tests
-- All tests must pass
-- Code coverage should not decrease
-- Documentation must be updated
-- Follow conventional commit messages
+### Requisitos de Pull Request
+- Todos os PRs devem incluir testes
+- Todos os testes devem passar
+- A cobertura de código não deve diminuir
+- A documentação deve ser atualizada
+- Siga mensagens de commit convencionais
 
-### Commit Message Format
+### Formato de Mensagem de Commit
 ```
-type(scope): subject
+tipo(escopo): assunto
 
-body
+corpo
 
-footer
+rodapé
 ```
 
-Types: feat, fix, docs, style, refactor, test, chore
+Tipos: feat, fix, docs, style, refactor, test, chore
 
-### Branch Naming Convention
-- `feature/description` - for new features
-- `fix/description` - for bug fixes
-- `docs/description` - for documentation
-- `refactor/description` - for refactoring
-- `test/description` - for test additions/modifications
+### Convenção de Nomenclatura de Branch
+- `feature/descricao` - para novos recursos
+- `fix/descricao` - para correções de bugs
+- `docs/descricao` - para documentação
+- `refactor/descricao` - para refatoração
+- `test/descricao` - para adições/modificações de testes
 
-## Review Checklist
+## Checklist de Revisão
 
-When reviewing PRs, ensure:
-- [ ] Code follows project style guidelines
-- [ ] All tests pass
-- [ ] New features have tests
-- [ ] Documentation is updated
-- [ ] No security vulnerabilities introduced
-- [ ] Performance impact is acceptable
-- [ ] Error handling is appropriate
-- [ ] Code is maintainable and readable
-- [ ] No hardcoded values or secrets
-- [ ] Dependencies are justified and secure
+Ao revisar PRs, garanta:
+- [ ] O código segue as diretrizes de estilo do projeto
+- [ ] Todos os testes passam
+- [ ] Novos recursos têm testes
+- [ ] A documentação está atualizada
+- [ ] Nenhuma vulnerabilidade de segurança foi introduzida
+- [ ] O impacto na performance é aceitável
+- [ ] O tratamento de erros é apropriado
+- [ ] O código é manutenível e legível
+- [ ] Não há valores hardcoded ou secrets
+- [ ] As dependências são justificadas e seguras
 
-## Common Patterns to Follow
+## Padrões Comuns a Seguir
 
-### Error Handling
-```javascript
+### Tratamento de Erros
+```kotlin
 try {
-  // Operation
-} catch (error) {
-  logger.error('Context-specific error message', { error, context });
-  throw new CustomError('User-friendly message', { cause: error });
+    // Operação
+} catch (e: Exception) {
+    logger.error("Mensagem de erro específica do contexto", e)
+    throw CustomException("Mensagem amigável ao usuário", e)
 }
 ```
 
-### Async Operations
-- Use async/await over raw promises
-- Always handle errors in async functions
-- Avoid callback hell
+### Operações Assíncronas
+- Use coroutines do Kotlin para operações assíncronas
+- Sempre trate erros em funções assíncronas
+- Evite callback hell
 
-### Configuration
-- Use environment variables
-- Provide sensible defaults
-- Validate configuration at startup
+### Configuração
+- Use variáveis de ambiente
+- Forneça valores padrão sensatos
+- Valide a configuração na inicialização
 
-## Resources
-- Project Wiki: [Link to wiki]
-- Style Guide: [Link to style guide]
-- Architecture Documentation: [Link to architecture docs]
+## Recursos
+- Wiki do Projeto: [Link para wiki]
+- Guia de Estilo: [Link para guia de estilo]
+- Documentação de Arquitetura: [Link para docs de arquitetura]

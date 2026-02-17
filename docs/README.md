@@ -1,49 +1,49 @@
-# Documentation
+# Documentação
 
-Welcome to the s-code-ai documentation!
+Bem-vindo à documentação do s-code-ai!
 
-## Table of Contents
+## Índice
 
-1. [Getting Started](./getting-started.md)
-2. [Best Practices](./best-practices.md)
-3. [Examples](../examples/)
+1. [Começando](./getting-started.md)
+2. [Melhores Práticas](./best-practices.md)
+3. [Exemplos](../examples/)
 4. [FAQ](./faq.md)
 
-## Quick Links
+## Links Rápidos
 
-### For Developers
-- [Copilot Instructions](../.github/copilot-instructions.md)
-- [Review Guidelines](../.github/copilot-review-guidelines.md)
-- [Contributing Guide](../.github/CONTRIBUTING.md)
+### Para Desenvolvedores
+- [Instruções do Copilot](../.github/copilot-instructions.md)
+- [Diretrizes de Revisão](../.github/copilot-review-guidelines.md)
+- [Guia de Contribuição](../.github/CONTRIBUTING.md)
 
-### Resources
-- [GitHub Copilot Docs](https://docs.github.com/en/copilot)
-- [AI-Assisted Development](./best-practices.md)
-- [Code Examples](../examples/)
+### Recursos
+- [Documentação do GitHub Copilot](https://docs.github.com/pt/copilot)
+- [Desenvolvimento Assistido por IA](./best-practices.md)
+- [Exemplos de Código](../examples/)
 
-## Overview
+## Visão Geral
 
-This project demonstrates AI-oriented development using GitHub Copilot. The documentation covers:
+Este projeto demonstra desenvolvimento orientado por IA usando GitHub Copilot. A documentação cobre:
 
-- Setting up your development environment
-- Using GitHub Copilot effectively
-- Writing AI-friendly code
-- Automated PR reviews
-- Best practices and patterns
+- Configurando seu ambiente de desenvolvimento
+- Usando o GitHub Copilot efetivamente
+- Escrevendo código amigável para IA
+- Revisões automatizadas de PR
+- Melhores práticas e padrões
 
-## Getting Help
+## Obtendo Ajuda
 
-If you can't find what you're looking for:
+Se você não conseguir encontrar o que procura:
 
-1. Check the [FAQ](./faq.md)
-2. Ask GitHub Copilot in your IDE
-3. [Open an issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
-4. Contact the maintainers
+1. Confira o [FAQ](./faq.md)
+2. Pergunte ao GitHub Copilot na sua IDE
+3. [Abra uma issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
+4. Entre em contato com os mantenedores
 
-## Contributing to Documentation
+## Contribuindo para a Documentação
 
-Found an error or want to improve the docs? PRs are welcome!
+Encontrou um erro ou quer melhorar os docs? PRs são bem-vindos!
 
-1. Edit the relevant file
-2. Submit a PR
-3. Follow our [Contributing Guide](../.github/CONTRIBUTING.md)
+1. Edite o arquivo relevante
+2. Envie um PR
+3. Siga nosso [Guia de Contribuição](../.github/CONTRIBUTING.md)

@@ -1,346 +1,346 @@
-# Frequently Asked Questions (FAQ)
+# Perguntas Frequentes (FAQ)
 
-## General Questions
+## Perguntas Gerais
 
-### What is s-code-ai?
+### O que é o s-code-ai?
 
-s-code-ai is an AI-oriented development project that demonstrates how to use GitHub Copilot for intelligent code assistance and automated PR reviews. It provides templates, guidelines, and examples for AI-assisted development.
+s-code-ai é um projeto de desenvolvimento orientado por IA que demonstra como usar o GitHub Copilot para assistência inteligente de código e revisões automatizadas de PR. Fornece templates, diretrizes e exemplos para desenvolvimento assistido por IA.
 
-### Do I need a GitHub Copilot subscription?
+### Preciso de uma assinatura do GitHub Copilot?
 
-Yes, you need an active GitHub Copilot subscription (individual or business) to use the AI assistance features. However, you can still use the project guidelines and workflows without it.
+Sim, você precisa de uma assinatura ativa do GitHub Copilot (individual ou empresarial) para usar os recursos de assistência de IA. No entanto, você ainda pode usar as diretrizes e workflows do projeto sem ela.
 
-### Which IDEs are supported?
+### Quais IDEs são suportadas?
 
-GitHub Copilot works with:
+O GitHub Copilot funciona com:
 - Visual Studio Code
 - Visual Studio
-- JetBrains IDEs (IntelliJ, PyCharm, etc.)
+- IDEs JetBrains (IntelliJ, PyCharm, etc.)
 - Neovim
-- Other editors with Copilot extensions
+- Outros editores com extensões do Copilot
 
-## Setup Questions
+## Perguntas de Configuração
 
-### How do I install GitHub Copilot?
+### Como instalo o GitHub Copilot?
 
-See our [Getting Started Guide](./getting-started.md#2-install-github-copilot) for detailed installation instructions for your IDE.
+Veja nosso [Guia de Início](./getting-started.md#2-instale-o-github-copilot) para instruções detalhadas de instalação para sua IDE.
 
-### Why isn't Copilot suggesting code?
+### Por que o Copilot não está sugerindo código?
 
-Common reasons:
-1. Copilot subscription not active
-2. IDE extension not enabled
-3. File type not supported
-4. No internet connection
-5. Need to write more context in comments
+Razões comuns:
+1. Assinatura do Copilot não ativa
+2. Extensão da IDE não ativada
+3. Tipo de arquivo não suportado
+4. Sem conexão com a internet
+5. Precisa escrever mais contexto em comentários
 
-**Solution:** Check your subscription status, enable the extension, and try writing more descriptive comments.
+**Solução:** Verifique o status da sua assinatura, ative a extensão e tente escrever comentários mais descritivos.
 
-### Can I use this with my existing project?
+### Posso usar isso com meu projeto existente?
 
-Yes! You can copy the files from `.github/` directory to your project:
+Sim! Você pode copiar os arquivos do diretório `.github/` para seu projeto:
 - `.github/copilot-instructions.md`
 - `.github/copilot-review-guidelines.md`
 - `.github/workflows/copilot-review.yml`
 
-Customize them for your project's needs.
+Personalize-os para as necessidades do seu projeto.
 
-## Usage Questions
+## Perguntas de Uso
 
-### How do I write better prompts for Copilot?
+### Como escrevo melhores prompts para o Copilot?
 
-1. Be specific and descriptive
-2. Include context and requirements
-3. Mention edge cases
-4. Use natural language
-5. Break down complex tasks
+1. Seja específico e descritivo
+2. Inclua contexto e requisitos
+3. Mencione casos extremos
+4. Use linguagem natural
+5. Divida tarefas complexas
 
-Example:
-```javascript
-// Create a function that validates email addresses according to RFC 5322,
-// handles common typos, and returns detailed error messages
+Exemplo:
+```kotlin
+// Criar uma função que valida endereços de email de acordo com RFC 5322,
+// trata erros de digitação comuns e retorna mensagens de erro detalhadas
 ```
 
-See [Best Practices](./best-practices.md) for more details.
+Veja [Melhores Práticas](./best-practices.md) para mais detalhes.
 
-### Should I trust all of Copilot's suggestions?
+### Devo confiar em todas as sugestões do Copilot?
 
-No! Always:
-- ✅ Review the suggested code
-- ✅ Understand what it does
-- ✅ Test thoroughly
-- ✅ Check for security issues
-- ✅ Verify it follows project standards
+Não! Sempre:
+- ✅ Revise o código sugerido
+- ✅ Entenda o que ele faz
+- ✅ Teste minuciosamente
+- ✅ Verifique problemas de segurança
+- ✅ Verifique se segue os padrões do projeto
 
-Copilot is a tool to assist you, not replace your judgment.
+O Copilot é uma ferramenta para ajudá-lo, não substituir seu julgamento.
 
-### How do I use Copilot for code reviews?
+### Como uso o Copilot para revisões de código?
 
-1. Open Copilot Chat in your IDE
-2. Select the code to review
-3. Use commands like `/review` or `/explain`
-4. Ask specific questions about security, performance, etc.
-5. Apply suggested improvements
+1. Abra o Copilot Chat na sua IDE
+2. Selecione o código para revisar
+3. Use comandos como `/review` ou `/explain`
+4. Faça perguntas específicas sobre segurança, performance, etc.
+5. Aplique melhorias sugeridas
 
-### Can Copilot write tests for me?
+### O Copilot pode escrever testes para mim?
 
-Yes! Copilot can help generate tests:
+Sim! O Copilot pode ajudar a gerar testes:
 
-```javascript
-// Write comprehensive unit tests for the above function
-// Include edge cases, error conditions, and typical use cases
+```kotlin
+// Escrever testes unitários abrangentes para a função acima
+// Incluir casos extremos, condições de erro e casos de uso típicos
 ```
 
-But always review and enhance the generated tests.
+Mas sempre revise e melhore os testes gerados.
 
-## Workflow Questions
+## Perguntas sobre Workflow
 
-### What happens when I create a PR?
+### O que acontece quando eu crio um PR?
 
-The automated workflow:
-1. Analyzes your changes
-2. Posts a review comment with statistics
-3. Adds appropriate labels
-4. Runs code quality checks
-5. Performs security scans
+O workflow automatizado:
+1. Analisa suas mudanças
+2. Posta estatísticas e checklist de revisão
+3. Adiciona labels apropriadas
+4. Executa verificações de qualidade de código
+5. Executa análises de segurança
 
-### Why did my PR checks fail?
+### Por que minhas verificações de PR falharam?
 
-Check the workflow logs:
-1. Go to the PR's "Checks" tab
-2. Look at failed jobs
-3. Review error messages
-4. Fix issues and push updates
+Confira os logs do workflow:
+1. Vá para a aba "Checks" do PR
+2. Veja os jobs que falharam
+3. Revise as mensagens de erro
+4. Corrija problemas e faça push de atualizações
 
-Common issues:
-- Hardcoded secrets detected
-- Test failures
-- Style violations
-- Security vulnerabilities
+Problemas comuns:
+- Secrets hardcoded detectados
+- Falhas de teste
+- Violações de estilo
+- Vulnerabilidades de segurança
 
-### How do I customize the automated reviews?
+### Como personalizo as revisões automatizadas?
 
-Edit `.github/workflows/copilot-review.yml` to:
-- Add custom checks
-- Modify labeling logic
-- Change security scans
-- Add deployment steps
+Edite `.github/workflows/copilot-review.yml` para:
+- Adicionar verificações personalizadas
+- Modificar lógica de labeling
+- Mudar análises de segurança
+- Adicionar etapas de deployment
 
-## Code Quality Questions
+## Perguntas sobre Qualidade de Código
 
-### How much test coverage should I aim for?
+### Quanta cobertura de teste devo almejar?
 
-We recommend:
-- Minimum: 70% coverage
-- Target: 80% coverage
-- Critical paths: 100% coverage
+Recomendamos:
+- Mínimo: 70% de cobertura
+- Alvo: 80% de cobertura
+- Caminhos críticos: 100% de cobertura
 
-Focus on meaningful tests over hitting a percentage.
+Foque em testes significativos em vez de atingir uma porcentagem.
 
-### What coding standards should I follow?
+### Quais padrões de codificação devo seguir?
 
-See our [Copilot Instructions](../.github/copilot-instructions.md) for:
-- Code style guidelines
-- Naming conventions
-- Documentation requirements
-- Security standards
+Veja nossas [Instruções do Copilot](../.github/copilot-instructions.md) para:
+- Diretrizes de estilo de código
+- Convenções de nomenclatura
+- Requisitos de documentação
+- Padrões de segurança
 
-### How do I handle security vulnerabilities?
+### Como trato vulnerabilidades de segurança?
 
-1. Never commit secrets or credentials
-2. Validate and sanitize all inputs
-3. Use environment variables for config
-4. Keep dependencies updated
-5. Run security scans regularly
+1. Nunca faça commit de secrets ou credenciais
+2. Valide e sanitize todas as entradas
+3. Use variáveis de ambiente para configuração
+4. Mantenha dependências atualizadas
+5. Execute análises de segurança regularmente
 
-The automated workflow checks for common issues.
+O workflow automatizado verifica problemas comuns.
 
-## Troubleshooting
+## Solução de Problemas
 
-### Copilot suggestions are slow
+### Sugestões do Copilot estão lentas
 
-Possible causes:
-- Poor internet connection
-- IDE performance issues
-- Complex context
-- Server load
+Possíveis causas:
+- Conexão ruim com a internet
+- Problemas de performance da IDE
+- Contexto complexo
+- Carga do servidor
 
-**Solutions:**
-- Check your connection
-- Restart IDE
-- Simplify your prompt
-- Try again later
+**Soluções:**
+- Verifique sua conexão
+- Reinicie a IDE
+- Simplifique seu prompt
+- Tente novamente mais tarde
 
-### Copilot suggests outdated code
+### Copilot sugere código desatualizado
 
-Copilot's training data has a cutoff date. For newer technologies:
-- Consult official documentation
-- Provide more context in comments
-- Guide Copilot with examples
-- Review and update suggestions
+Os dados de treinamento do Copilot têm uma data de corte. Para tecnologias mais novas:
+- Consulte documentação oficial
+- Forneça mais contexto em comentários
+- Guie o Copilot com exemplos
+- Revise e atualize sugestões
 
-### My language/framework isn't well supported
+### Minha linguagem/framework não é bem suportada
 
-Copilot works best with popular languages. For less common ones:
-- Provide more examples in comments
-- Include library imports
-- Reference documentation
-- Be more explicit in prompts
+O Copilot funciona melhor com linguagens populares. Para as menos comuns:
+- Forneça mais exemplos em comentários
+- Inclua imports de bibliotecas
+- Referencie documentação
+- Seja mais explícito em prompts
 
-### Copilot isn't following project conventions
+### Copilot não está seguindo convenções do projeto
 
-Make sure:
-1. `.github/copilot-instructions.md` is configured
-2. Comments reference the conventions
-3. Context includes existing code examples
-4. IDE has latest updates
+Certifique-se:
+1. `.github/copilot-instructions.md` está configurado
+2. Comentários referenciam as convenções
+3. Contexto inclui exemplos de código existentes
+4. IDE tem atualizações mais recentes
 
-## Best Practices Questions
+## Perguntas sobre Melhores Práticas
 
-### Should I comment every line?
+### Devo comentar cada linha?
 
-No! Comment:
-- ✅ Complex logic
-- ✅ Non-obvious decisions
-- ✅ Public APIs
-- ✅ Prompts for Copilot
+Não! Comente:
+- ✅ Lógica complexa
+- ✅ Decisões não óbvias
+- ✅ APIs públicas
+- ✅ Prompts para o Copilot
 
-Don't comment:
-- ❌ Obvious code
-- ❌ Self-explanatory functions
-- ❌ Every single line
+Não comente:
+- ❌ Código óbvio
+- ❌ Funções auto-explicativas
+- ❌ Cada linha individual
 
-### How do I handle large refactoring?
+### Como trato grandes refatorações?
 
-1. Break into small changes
-2. Use Copilot for repetitive tasks
-3. Test after each step
-4. Commit frequently
-5. Create multiple small PRs
+1. Divida em mudanças pequenas
+2. Use o Copilot para tarefas repetitivas
+3. Teste após cada etapa
+4. Faça commit frequentemente
+5. Crie múltiplos PRs pequenos
 
-### Can I use Copilot for documentation?
+### Posso usar o Copilot para documentação?
 
-Absolutely! Use Copilot to:
-- Generate JSDoc/docstrings
-- Write README sections
-- Create API documentation
-- Explain complex algorithms
-- Draft tutorials
+Absolutamente! Use o Copilot para:
+- Gerar KDoc/docstrings
+- Escrever seções de README
+- Criar documentação de API
+- Explicar algoritmos complexos
+- Rascunhar tutoriais
 
-### How do I learn from Copilot?
+### Como aprendo com o Copilot?
 
-- Review suggestions to learn patterns
-- Ask Copilot to explain code
-- Experiment with different prompts
-- Compare multiple suggestions
-- Study generated code
+- Revise sugestões para aprender padrões
+- Peça ao Copilot para explicar código
+- Experimente com diferentes prompts
+- Compare múltiplas sugestões
+- Estude o código gerado
 
-## Integration Questions
+## Perguntas de Integração
 
-### Can I integrate with other CI/CD tools?
+### Posso integrar com outras ferramentas de CI/CD?
 
-Yes! The GitHub Actions workflow can be extended to:
-- Deploy applications
-- Run additional tests
-- Integrate with monitoring
-- Trigger other workflows
+Sim! O workflow do GitHub Actions pode ser estendido para:
+- Fazer deploy de aplicações
+- Executar testes adicionais
+- Integrar com monitoramento
+- Disparar outros workflows
 
-### Does this work with monorepos?
+### Isso funciona com monorepos?
 
-Yes, but you may need to:
-- Adjust workflow paths
-- Configure per-package settings
-- Customize labeling logic
-- Set up separate workflows
+Sim, mas você pode precisar:
+- Ajustar caminhos de workflow
+- Configurar definições por pacote
+- Personalizar lógica de labeling
+- Configurar workflows separados
 
-### Can I use this with private repositories?
+### Posso usar isso com repositórios privados?
 
-Yes! All features work with private repos. The automated workflows use GitHub's built-in `GITHUB_TOKEN`.
+Sim! Todos os recursos funcionam com repositórios privados. Os workflows automatizados usam o `GITHUB_TOKEN` embutido do GitHub.
 
-## Contributing Questions
+## Perguntas sobre Contribuição
 
-### How can I contribute?
+### Como posso contribuir?
 
-See our [Contributing Guide](../.github/CONTRIBUTING.md) for:
-- Development workflow
-- Code standards
-- PR process
-- Review guidelines
+Veja nosso [Guia de Contribuição](../.github/CONTRIBUTING.md) para:
+- Fluxo de trabalho de desenvolvimento
+- Padrões de código
+- Processo de PR
+- Diretrizes de revisão
 
-### I found a bug, what should I do?
+### Encontrei um bug, o que devo fazer?
 
-1. Check if it's already reported
-2. Create a detailed issue with:
-   - Steps to reproduce
-   - Expected behavior
-   - Actual behavior
-   - Environment details
-3. Submit a PR if you can fix it
+1. Verifique se já foi relatado
+2. Crie uma issue detalhada com:
+   - Passos para reproduzir
+   - Comportamento esperado
+   - Comportamento atual
+   - Detalhes do ambiente
+3. Envie um PR se puder corrigir
 
-### Can I add new examples?
+### Posso adicionar novos exemplos?
 
-Yes! We welcome new examples:
-1. Create a directory in `examples/`
-2. Add well-commented code
-3. Include tests
-4. Write a README
-5. Submit a PR
+Sim! Aceitamos novos exemplos:
+1. Crie um diretório em `examples/`
+2. Adicione código bem comentado
+3. Inclua testes
+4. Escreva um README
+5. Envie um PR
 
-## Advanced Questions
+## Perguntas Avançadas
 
-### How do I customize Copilot instructions?
+### Como personalizo as instruções do Copilot?
 
-Edit `.github/copilot-instructions.md`:
-- Add project-specific patterns
-- Define custom conventions
-- Include architecture details
-- Add review criteria
+Edite `.github/copilot-instructions.md`:
+- Adicione padrões específicos do projeto
+- Defina convenções personalizadas
+- Inclua detalhes de arquitetura
+- Adicione critérios de revisão
 
-### Can I use multiple AI assistants?
+### Posso usar múltiplos assistentes de IA?
 
-Yes, but:
-- Be consistent in approach
-- Follow project guidelines
-- Review all suggestions
-- Test thoroughly
+Sim, mas:
+- Seja consistente na abordagem
+- Siga diretrizes do projeto
+- Revise todas as sugestões
+- Teste minuciosamente
 
-### How do I measure ROI of AI assistance?
+### Como meço o ROI da assistência de IA?
 
-Track:
-- Development velocity
-- Bug reduction rate
-- Code quality metrics
-- Developer satisfaction
-- Time to onboard new developers
+Acompanhe:
+- Velocidade de desenvolvimento
+- Taxa de redução de bugs
+- Métricas de qualidade de código
+- Satisfação do desenvolvedor
+- Tempo para onboarding de novos desenvolvedores
 
-## Support
+## Suporte
 
-### Where can I get help?
+### Onde posso obter ajuda?
 
-1. 📖 Read the [documentation](./README.md)
-2. 💬 Use GitHub Copilot Chat
-3. 🐛 [Open an issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
-4. 📧 Contact maintainers
-5. 👥 Ask the community
+1. 📖 Leia a [documentação](./README.md)
+2. 💬 Use o Copilot Chat
+3. 🐛 [Abra uma issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
+4. 📧 Entre em contato com os mantenedores
+5. 👥 Pergunte à comunidade
 
-### How do I report a security issue?
+### Como reporto um problema de segurança?
 
-For security concerns:
-- Do NOT open a public issue
-- Contact maintainers directly
-- Provide detailed information
-- Allow time for a fix
+Para preocupações de segurança:
+- NÃO abra uma issue pública
+- Entre em contato diretamente com os mantenedores
+- Forneça informações detalhadas
+- Permita tempo para uma correção
 
-### The documentation is unclear, can I help?
+### A documentação não está clara, posso ajudar?
 
-Yes! Documentation improvements are always welcome:
-1. Identify the unclear section
-2. Suggest improvements
-3. Submit a PR
-4. Help others understand
+Sim! Melhorias de documentação são sempre bem-vindas:
+1. Identifique a seção pouco clara
+2. Sugira melhorias
+3. Envie um PR
+4. Ajude outros a entender
 
 ---
 
-**Don't see your question?** 
+**Não vê sua pergunta?**
 
-[Open an issue](https://github.com/silvalvesmurillo/s-code-ai/issues) and we'll add it to the FAQ!
+[Abra uma issue](https://github.com/silvalvesmurillo/s-code-ai/issues) e nós a adicionaremos ao FAQ!

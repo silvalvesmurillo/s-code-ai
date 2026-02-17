@@ -1,48 +1,48 @@
-# Getting Started with s-code-ai
+# Começando com s-code-ai
 
-## Prerequisites
+## Pré-requisitos
 
-### Required
-- **Git**: Version control system
-- **GitHub Account**: With access to GitHub Copilot
-- **IDE**: VS Code, Visual Studio, JetBrains, or other Copilot-supported IDE
+### Obrigatório
+- **Git**: Sistema de controle de versão
+- **Conta GitHub**: Com acesso ao GitHub Copilot
+- **IDE**: VS Code, Visual Studio, JetBrains ou outra IDE com suporte ao Copilot
 
-### Optional but Recommended
-- **Programming Language Tools**: Install tools for your preferred language (Node.js, Python, Go, etc.)
-- **Docker**: For containerized development
+### Opcional mas Recomendado
+- **Ferramentas de Linguagem de Programação**: Instale ferramentas para sua linguagem preferida (Kotlin, Python, Go, etc.)
+- **Docker**: Para desenvolvimento containerizado
 
-## Installation
+## Instalação
 
-### 1. Clone the Repository
+### 1. Clone o Repositório
 
 ```bash
 git clone https://github.com/silvalvesmurillo/s-code-ai.git
 cd s-code-ai
 ```
 
-### 2. Install GitHub Copilot
+### 2. Instale o GitHub Copilot
 
 #### VS Code
-1. Open VS Code
-2. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
-3. Search for "GitHub Copilot"
-4. Click Install
-5. Sign in with your GitHub account
+1. Abra o VS Code
+2. Vá para Extensões (Ctrl+Shift+X / Cmd+Shift+X)
+3. Procure por "GitHub Copilot"
+4. Clique em Instalar
+5. Faça login com sua conta GitHub
 
-#### JetBrains IDEs
-1. Open Settings/Preferences
-2. Go to Plugins
-3. Search for "GitHub Copilot"
-4. Install and restart
-5. Sign in with your GitHub account
+#### IDEs JetBrains
+1. Abra Configurações/Preferências
+2. Vá para Plugins
+3. Procure por "GitHub Copilot"
+4. Instale e reinicie
+5. Faça login com sua conta GitHub
 
-#### Other IDEs
-Check [GitHub Copilot documentation](https://docs.github.com/en/copilot) for your IDE.
+#### Outras IDEs
+Confira a [documentação do GitHub Copilot](https://docs.github.com/pt/copilot) para sua IDE.
 
-### 3. Configure Your IDE
+### 3. Configure Sua IDE
 
-#### VS Code Settings
-Add to your `settings.json`:
+#### Configurações do VS Code
+Adicione ao seu `settings.json`:
 
 ```json
 {
@@ -57,131 +57,131 @@ Add to your `settings.json`:
 ```
 
 #### Copilot Chat
-Enable Copilot Chat for interactive assistance:
-- VS Code: Install "GitHub Copilot Chat" extension
-- JetBrains: Included with Copilot plugin
+Ative o Copilot Chat para assistência interativa:
+- VS Code: Instale a extensão "GitHub Copilot Chat"
+- JetBrains: Incluído com o plugin do Copilot
 
-## Verify Installation
+## Verificar Instalação
 
-### 1. Test Copilot
+### 1. Testar o Copilot
 
-Create a new file in your preferred language (e.g., `test.py`, `test.js`, `test.go`):
+Crie um novo arquivo na sua linguagem preferida (ex: `test.kt`, `test.py`, `test.go`):
 
-```python
-# Function to calculate the factorial of a number
-def factorial(n):
-    # Copilot should suggest the implementation
+```kotlin
+// Função para calcular o fatorial de um número
+fun factorial(n: Int): Int {
+    // Copilot deve sugerir a implementação
 ```
 
-Copilot should suggest code completion. Press Tab to accept suggestions.
+O Copilot deve sugerir conclusão de código. Pressione Tab para aceitar sugestões.
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 s-code-ai/
 ├── .github/
-│   ├── copilot-instructions.md      # Main Copilot configuration
-│   ├── copilot-review-guidelines.md # PR review standards
-│   ├── CONTRIBUTING.md              # Contribution guidelines
+│   ├── copilot-instructions.md      # Configuração principal do Copilot
+│   ├── copilot-review-guidelines.md # Padrões de revisão de PR
+│   ├── CONTRIBUTING.md              # Diretrizes de contribuição
 │   └── workflows/
-│       └── copilot-review.yml       # Automated PR reviews
+│       └── copilot-review.yml       # Revisões automatizadas de PR
 ├── docs/
-│   ├── README.md                     # Documentation index
-│   ├── getting-started.md           # This file
-│   └── best-practices.md            # AI development best practices
+│   ├── README.md                     # Índice de documentação
+│   ├── getting-started.md           # Este arquivo
+│   └── best-practices.md            # Melhores práticas de desenvolvimento IA
 ├── examples/
-│   └── README.md                     # Examples overview
+│   └── README.md                     # Visão geral de exemplos
 └── src/
-    └── (your project code)
+    └── (código do seu projeto)
 ```
 
-## First Steps
+## Primeiros Passos
 
-### 1. Read the Documentation
-- [Copilot Instructions](../.github/copilot-instructions.md)
-- [Review Guidelines](../.github/copilot-review-guidelines.md)
-- [Best Practices](./best-practices.md)
+### 1. Leia a Documentação
+- [Instruções do Copilot](../.github/copilot-instructions.md)
+- [Diretrizes de Revisão](../.github/copilot-review-guidelines.md)
+- [Melhores Práticas](./best-practices.md)
 
-### 2. Explore the Guidelines
-- Review [Copilot Instructions](../.github/copilot-instructions.md) for project standards
-- Check [Examples](../examples/) directory for guidance on creating examples
+### 2. Explore as Diretrizes
+- Revise [Instruções do Copilot](../.github/copilot-instructions.md) para padrões do projeto
+- Confira o diretório [Examples](../examples/) para orientação sobre criação de exemplos
 
-### 3. Create Your First Feature
+### 3. Crie Seu Primeiro Recurso
 
 ```bash
-# Create a feature branch
-git checkout -b feature/my-first-feature
+# Crie uma branch de feature
+git checkout -b feature/meu-primeiro-recurso
 
-# Create a new file
-# Use Copilot to help you write code
+# Crie um novo arquivo
+# Use o Copilot para ajudá-lo a escrever código
 
-# Test your changes
-# Use Copilot to generate tests
+# Teste suas mudanças
+# Use o Copilot para gerar testes
 
-# Commit and push
+# Commit e push
 git add .
-git commit -m "feat: add my first feature"
-git push origin feature/my-first-feature
+git commit -m "feat: adicionar meu primeiro recurso"
+git push origin feature/meu-primeiro-recurso
 ```
 
-### 4. Open a Pull Request
-- Go to GitHub
-- Create a PR from your branch
-- Watch the automated checks run
-- Address any feedback
+### 4. Abra um Pull Request
+- Vá para o GitHub
+- Crie um PR a partir da sua branch
+- Observe as verificações automatizadas executarem
+- Resolva qualquer feedback
 
-## Using Copilot
+## Usando o Copilot
 
-### Code Generation
-1. Write a comment describing what you want
-2. Press Enter and wait for Copilot's suggestion
-3. Press Tab to accept or keep typing to refine
+### Geração de Código
+1. Escreva um comentário descrevendo o que você quer
+2. Pressione Enter e aguarde a sugestão do Copilot
+3. Pressione Tab para aceitar ou continue digitando para refinar
 
 ### Copilot Chat
-- Open chat panel
-- Ask questions about code
-- Request code generation
-- Get explanations
+- Abra o painel de chat
+- Faça perguntas sobre código
+- Solicite geração de código
+- Obtenha explicações
 
-### Common Commands
-- `/explain` - Explain selected code
-- `/fix` - Suggest fixes for problems
-- `/tests` - Generate tests
-- `/doc` - Generate documentation
+### Comandos Comuns
+- `/explain` - Explicar código selecionado
+- `/fix` - Sugerir correções para problemas
+- `/tests` - Gerar testes
+- `/doc` - Gerar documentação
 
-## Next Steps
+## Próximos Passos
 
-Now that you're set up:
+Agora que você está configurado:
 
-1. Explore [Examples](../examples/)
-2. Read [Best Practices](./best-practices.md)
-3. Check the [FAQ](./faq.md)
-4. Start building with AI assistance!
+1. Explore [Exemplos](../examples/)
+2. Leia [Melhores Práticas](./best-practices.md)
+3. Confira o [FAQ](./faq.md)
+4. Comece a construir com assistência de IA!
 
-## Troubleshooting
+## Solução de Problemas
 
-### Copilot Not Working
-- Check your internet connection
-- Verify Copilot subscription is active
-- Restart your IDE
-- Check IDE extensions are up to date
+### Copilot Não Funciona
+- Verifique sua conexão com a internet
+- Verifique se a assinatura do Copilot está ativa
+- Reinicie sua IDE
+- Verifique se as extensões da IDE estão atualizadas
 
-### No Suggestions Appearing
-- Make sure Copilot is enabled
-- Check file type is supported
-- Write more descriptive comments
-- Wait a moment for suggestions
+### Nenhuma Sugestão Aparece
+- Certifique-se de que o Copilot está ativado
+- Verifique se o tipo de arquivo é suportado
+- Escreva comentários mais descritivos
+- Aguarde um momento para sugestões
 
-### Getting Poor Suggestions
-- Add more context in comments
-- Review [Best Practices](./best-practices.md)
-- Check [Copilot Instructions](../.github/copilot-instructions.md)
-- Be more specific in your prompts
+### Obtendo Sugestões Ruins
+- Adicione mais contexto em comentários
+- Revise [Melhores Práticas](./best-practices.md)
+- Confira [Instruções do Copilot](../.github/copilot-instructions.md)
+- Seja mais específico em seus prompts
 
-## Support
+## Suporte
 
-Need help?
-- 📖 Read the [FAQ](./faq.md)
-- 💬 Use Copilot Chat
-- 🐛 [Open an issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
-- 📧 Contact maintainers
+Precisa de ajuda?
+- 📖 Leia o [FAQ](./faq.md)
+- 💬 Use o Copilot Chat
+- 🐛 [Abra uma issue](https://github.com/silvalvesmurillo/s-code-ai/issues)
+- 📧 Entre em contato com os mantenedores

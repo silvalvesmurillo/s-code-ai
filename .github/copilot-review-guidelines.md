@@ -1,188 +1,189 @@
-# PR Review Guidelines for GitHub Copilot
+# Diretrizes de Revisão de PR para GitHub Copilot
 
-## Overview
-This document provides specific guidelines for automated PR reviews using GitHub Copilot and AI assistants.
+## Visão Geral
+Este documento fornece diretrizes específicas para revisões automatizadas de PR usando GitHub Copilot e assistentes de IA.
 
-## Automated Review Focus Areas
+## Áreas de Foco da Revisão Automatizada
 
-### 1. Code Quality
-- **Readability**: Is the code easy to understand?
-- **Maintainability**: Will this code be easy to modify later?
-- **Complexity**: Are functions and classes appropriately sized?
-- **Naming**: Are variables, functions, and classes well-named?
+### 1. Qualidade do Código
+- **Legibilidade**: O código é fácil de entender?
+- **Manutenibilidade**: Este código será fácil de modificar posteriormente?
+- **Complexidade**: As funções e classes têm tamanho apropriado?
+- **Nomenclatura**: As variáveis, funções e classes têm bons nomes?
 
-### 2. Security Checks
-- **Secrets**: No hardcoded passwords, API keys, or tokens
-- **Input Validation**: All user inputs are validated and sanitized
-- **Authentication**: Proper authentication and authorization checks
-- **Dependencies**: No known vulnerabilities in dependencies
-- **Data Exposure**: Sensitive data is properly protected
+### 2. Verificações de Segurança
+- **Secrets**: Sem senhas, chaves de API ou tokens hardcoded
+- **Validação de Entrada**: Todas as entradas de usuário são validadas e sanitizadas
+- **Autenticação**: Verificações adequadas de autenticação e autorização
+- **Dependências**: Sem vulnerabilidades conhecidas nas dependências
+- **Exposição de Dados**: Dados sensíveis são adequadamente protegidos
 
-### 3. Testing
-- **Coverage**: New code has appropriate test coverage
-- **Test Quality**: Tests are meaningful and test actual behavior
-- **Edge Cases**: Edge cases and error conditions are tested
-- **Integration**: Integration tests exist for critical paths
+### 3. Testes
+- **Cobertura**: Novo código tem cobertura de teste apropriada
+- **Qualidade dos Testes**: Os testes são significativos e testam comportamento real
+- **Casos Extremos**: Casos extremos e condições de erro são testados
+- **Integração**: Testes de integração existem para caminhos críticos
 
-### 4. Documentation
-- **Code Comments**: Complex logic is explained
-- **Function Documentation**: Public APIs are documented
-- **README Updates**: User-facing changes are documented
-- **Changelog**: Significant changes are logged
+### 4. Documentação
+- **Comentários de Código**: Lógica complexa é explicada
+- **Documentação de Funções**: APIs públicas são documentadas
+- **Atualizações de README**: Mudanças voltadas ao usuário são documentadas
+- **Changelog**: Mudanças significativas são registradas
 
 ### 5. Performance
-- **Algorithms**: Appropriate algorithms for the use case
-- **Database Queries**: Optimized and indexed properly
-- **Caching**: Appropriate use of caching
-- **Memory**: No obvious memory leaks
+- **Algoritmos**: Algoritmos apropriados para o caso de uso
+- **Consultas de Banco de Dados**: Otimizadas e indexadas adequadamente
+- **Cache**: Uso apropriado de cache
+- **Memória**: Sem vazamentos de memória óbvios
 
-### 6. Error Handling
-- **Try-Catch**: Appropriate error handling exists
-- **Error Messages**: Clear and actionable error messages
-- **Logging**: Errors are logged with sufficient context
-- **Recovery**: Graceful degradation and recovery
+### 6. Tratamento de Erros
+- **Try-Catch**: Tratamento de erros apropriado existe
+- **Mensagens de Erro**: Mensagens de erro claras e acionáveis
+- **Logging**: Erros são registrados com contexto suficiente
+- **Recuperação**: Degradação graciosa e recuperação
 
-## Review Process
+## Processo de Revisão
 
-### When a PR is Opened
-1. Check that all required checks pass
-2. Review code changes for the focus areas above
-3. Leave inline comments for specific issues
-4. Provide a summary comment with:
-   - Overall assessment
-   - Key concerns
-   - Suggestions for improvement
-   - Approval or request for changes
+### Quando um PR é Aberto
+1. Verifique que todas as verificações necessárias passaram
+2. Revise mudanças de código para as áreas de foco acima
+3. Deixe comentários inline para problemas específicos
+4. Forneça um comentário resumido com:
+   - Avaliação geral
+   - Principais preocupações
+   - Sugestões de melhoria
+   - Aprovação ou solicitação de mudanças
 
-### Comment Guidelines
-- Be specific and actionable
-- Reference line numbers
-- Explain *why* something is an issue
-- Suggest concrete improvements
-- Be constructive and respectful
+### Diretrizes de Comentários
+- Seja específico e acionável
+- Referencie números de linha
+- Explique *por que* algo é um problema
+- Sugira melhorias concretas
+- Seja construtivo e respeitoso
 
-### Example Comments
+### Exemplos de Comentários
 
-**Good Comment:**
+**Bom Comentário:**
 ```
-Lines 45-50: This function could be vulnerable to SQL injection. 
-Consider using parameterized queries instead of string concatenation.
+Linhas 45-50: Esta função pode ser vulnerável a injeção SQL.
+Considere usar consultas parametrizadas em vez de concatenação de strings.
 
-Example:
-```sql
-SELECT * FROM users WHERE id = ?
+Exemplo:
+```kotlin
+val query = "SELECT * FROM users WHERE id = ?"
+preparedStatement.setString(1, userId)
 ```
-Instead of:
-```sql
-SELECT * FROM users WHERE id = '${userId}'
+Em vez de:
+```kotlin
+val query = "SELECT * FROM users WHERE id = '$userId'"
 ```
-```
-
-**Poor Comment:**
-```
-This is bad
 ```
 
-## Severity Levels
+**Comentário Ruim:**
+```
+Isto está ruim
+```
 
-### 🔴 Critical (Must Fix)
-- Security vulnerabilities
-- Data loss risks
-- Breaking changes without migration
-- Test failures
+## Níveis de Severidade
 
-### 🟡 Warning (Should Fix)
-- Performance issues
-- Missing tests
-- Unclear code
-- Missing documentation
+### 🔴 Crítico (Deve Corrigir)
+- Vulnerabilidades de segurança
+- Riscos de perda de dados
+- Mudanças que quebram sem migração
+- Falhas de teste
 
-### 🟢 Suggestion (Nice to Have)
-- Style improvements
-- Refactoring opportunities
-- Additional tests
-- Enhanced documentation
+### 🟡 Aviso (Deve Corrigir)
+- Problemas de performance
+- Testes faltando
+- Código pouco claro
+- Documentação faltando
 
-## Automatic Approval Criteria
+### 🟢 Sugestão (Bom ter)
+- Melhorias de estilo
+- Oportunidades de refatoração
+- Testes adicionais
+- Documentação aprimorada
 
-A PR can be automatically approved if:
-- All tests pass
-- No security issues detected
-- Code coverage is maintained or improved
-- Documentation is updated
-- Follows all style guidelines
-- No critical or warning issues found
+## Critérios de Aprovação Automática
 
-## Review Templates
+Um PR pode ser aprovado automaticamente se:
+- Todos os testes passam
+- Nenhum problema de segurança detectado
+- Cobertura de código é mantida ou melhorada
+- Documentação está atualizada
+- Segue todas as diretrizes de estilo
+- Nenhum problema crítico ou de aviso encontrado
 
-### Standard Review Comment
+## Modelos de Revisão
+
+### Comentário de Revisão Padrão
 ```markdown
-## AI Review Summary
+## Resumo da Revisão IA
 
-### ✅ Strengths
-- [List positive aspects]
+### ✅ Pontos Fortes
+- [Liste aspectos positivos]
 
-### ⚠️ Concerns
-- [List issues found with severity]
+### ⚠️ Preocupações
+- [Liste problemas encontrados com severidade]
 
-### 💡 Suggestions
-- [List optional improvements]
+### 💡 Sugestões
+- [Liste melhorias opcionais]
 
-### 🎯 Action Items
-- [ ] [Required changes]
+### 🎯 Itens de Ação
+- [ ] [Mudanças necessárias]
 
-Overall: [APPROVED | REQUEST CHANGES | COMMENT]
+Geral: [APROVADO | SOLICITAR MUDANÇAS | COMENTÁRIO]
 ```
 
-### Security Review
+### Revisão de Segurança
 ```markdown
-## 🔒 Security Review
+## 🔒 Revisão de Segurança
 
-### Findings
-- [List security concerns]
+### Descobertas
+- [Liste preocupações de segurança]
 
-### Recommendations
-- [Specific security improvements]
+### Recomendações
+- [Melhorias específicas de segurança]
 
-### References
-- [Links to security best practices]
+### Referências
+- [Links para melhores práticas de segurança]
 ```
 
-### Performance Review
+### Revisão de Performance
 ```markdown
-## ⚡ Performance Review
+## ⚡ Revisão de Performance
 
-### Potential Issues
-- [Performance concerns]
+### Problemas Potenciais
+- [Preocupações de performance]
 
-### Optimization Suggestions
-- [Specific improvements]
+### Sugestões de Otimização
+- [Melhorias específicas]
 
 ### Benchmarks
-- [Performance metrics if available]
+- [Métricas de performance se disponível]
 ```
 
-## Exclusions
+## Exclusões
 
-Do not review:
-- Auto-generated code (unless security-sensitive)
-- Dependency lock files (unless there are security concerns)
-- Build artifacts
-- Configuration for external services (unless credentials exposed)
+Não revise:
+- Código auto-gerado (a menos que seja sensível à segurança)
+- Arquivos de lock de dependências (a menos que haja preocupações de segurança)
+- Artefatos de build
+- Configuração para serviços externos (a menos que credenciais expostas)
 
-## Integration with CI/CD
+## Integração com CI/CD
 
-This review process integrates with:
-- GitHub Actions for automated checks
-- CodeQL for security scanning
-- Test coverage tools
-- Linters and formatters
+Este processo de revisão se integra com:
+- GitHub Actions para verificações automatizadas
+- CodeQL para análise de segurança
+- Ferramentas de cobertura de testes
+- Linters e formatadores
 
-## Continuous Improvement
+## Melhoria Contínua
 
-Review guidelines should be updated based on:
-- Team feedback
-- Common issues found
-- New security threats
-- Technology changes
-- Project evolution
+As diretrizes de revisão devem ser atualizadas com base em:
+- Feedback da equipe
+- Problemas comuns encontrados
+- Novas ameaças de segurança
+- Mudanças de tecnologia
+- Evolução do projeto
