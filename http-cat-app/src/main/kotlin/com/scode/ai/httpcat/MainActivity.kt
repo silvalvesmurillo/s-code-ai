@@ -87,7 +87,7 @@ fun HttpCatScreen(
     
     LaunchedEffect(Unit) {
         try {
-            statuses = service.fetchAllStatuses()
+            statuses = service.buscarTodosStatus()
             isLoading = false
         } catch (e: Exception) {
             error = e.message
@@ -108,7 +108,7 @@ fun HttpCatScreen(
                         error = null
                         scope.launch {
                             try {
-                                statuses = service.fetchAllStatuses()
+                                statuses = service.buscarTodosStatus()
                                 isLoading = false
                             } catch (e: Exception) {
                                 error = e.message

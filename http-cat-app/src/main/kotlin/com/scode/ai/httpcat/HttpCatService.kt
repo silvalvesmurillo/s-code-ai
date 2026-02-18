@@ -1,19 +1,19 @@
 package com.scode.ai.httpcat
 
 /**
- * Service interface for fetching HTTP cat images
+ * Interface de serviço pra buscar imagens de gato HTTP
  */
 interface HttpCatService {
     /**
-     * Fetches a list of all available HTTP status codes with their image URLs
-     * @return List of HttpCatStatus objects
+     * Busca uma lista de todos os códigos de status HTTP disponíveis com suas URLs de imagem
+     * @return Lista de objetos HttpCatStatus
      */
-    suspend fun fetchAllStatuses(): List<HttpCatStatus>
+    suspend fun buscarTodosStatus(): List<HttpCatStatus>
     
     /**
-     * Checks if an image exists for a given HTTP status code
-     * @param code The HTTP status code to check
-     * @return true if the image exists, false otherwise
+     * Verifica se uma imagem existe pra um código de status HTTP
+     * @param codigo O código de status HTTP pra verificar
+     * @return verdadeiro se a imagem existir, falso caso contrário
      */
-    suspend fun imageExists(code: Int): Boolean
+    suspend fun imagemExiste(codigo: Int): Boolean
 }

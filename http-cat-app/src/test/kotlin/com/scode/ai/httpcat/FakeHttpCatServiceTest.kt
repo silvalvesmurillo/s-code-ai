@@ -7,20 +7,20 @@ import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 /**
- * Unit tests for FakeHttpCatService
+ * Testes unitários pro FakeHttpCatService
  */
 class FakeHttpCatServiceTest {
     
     @Test
-    fun `fetchAllStatuses returns sorted list of available codes`() = runTest {
-        // Given
+    fun `buscarTodosStatus retorna lista ordenada de codigos disponiveis`() = runTest {
+        // Dado
         val availableCodes = setOf(500, 200, 404, 201)
         val service = FakeHttpCatService(availableCodes)
         
-        // When
-        val result = service.fetchAllStatuses()
+        // Quando
+        val result = service.buscarTodosStatus()
         
-        // Then
+        // Entao
         assertEquals(4, result.size)
         assertEquals(200, result[0].code)
         assertEquals(201, result[1].code)
@@ -29,64 +29,64 @@ class FakeHttpCatServiceTest {
     }
     
     @Test
-    fun `fetchAllStatuses returns correct image URLs`() = runTest {
-        // Given
+    fun `buscarTodosStatus retorna URLs corretas das imagens`() = runTest {
+        // Dado
         val availableCodes = setOf(200, 404)
         val service = FakeHttpCatService(availableCodes)
         
-        // When
-        val result = service.fetchAllStatuses()
+        // Quando
+        val result = service.buscarTodosStatus()
         
-        // Then
+        // Entao
         assertEquals("https://http.cat/200", result[0].imageUrl)
         assertEquals("https://http.cat/404", result[1].imageUrl)
     }
     
     @Test
-    fun `imageExists returns true for available codes`() = runTest {
-        // Given
+    fun `imagemExiste retorna verdadeiro pra codigos disponiveis`() = runTest {
+        // Dado
         val availableCodes = setOf(200, 404, 500)
         val service = FakeHttpCatService(availableCodes)
         
-        // When & Then
-        assertTrue(service.imageExists(200))
-        assertTrue(service.imageExists(404))
-        assertTrue(service.imageExists(500))
+        // Quando e Entao
+        assertTrue(service.imagemExiste(200))
+        assertTrue(service.imagemExiste(404))
+        assertTrue(service.imagemExiste(500))
     }
     
     @Test
-    fun `imageExists returns false for unavailable codes`() = runTest {
-        // Given
+    fun `imagemExiste retorna falso pra codigos nao disponiveis`() = runTest {
+        // Dado
         val availableCodes = setOf(200, 404)
         val service = FakeHttpCatService(availableCodes)
         
-        // When & Then
-        assertFalse(service.imageExists(500))
-        assertFalse(service.imageExists(301))
-        assertFalse(service.imageExists(999))
+        // Quando e Entao
+        assertFalse(service.imagemExiste(500))
+        assertFalse(service.imagemExiste(301))
+        assertFalse(service.imagemExiste(999))
     }
     
     @Test
-    fun `fetchAllStatuses with empty codes returns empty list`() = runTest {
-        // Given
+    fun `buscarTodosStatus com codigos vazios retorna lista vazia`() = runTest {
+        // Dado
         val service = FakeHttpCatService(emptySet())
         
-        // When
-        val result = service.fetchAllStatuses()
+        // Quando
+        val result = service.buscarTodosStatus()
         
-        // Then
+        // Entao
         assertEquals(0, result.size)
     }
     
     @Test
-    fun `fetchAllStatuses with default codes returns predefined list`() = runTest {
-        // Given
+    fun `buscarTodosStatus com codigos padrao retorna lista predefinida`() = runTest {
+        // Dado
         val service = FakeHttpCatService()
         
-        // When
-        val result = service.fetchAllStatuses()
+        // Quando
+        val result = service.buscarTodosStatus()
         
-        // Then
+        // Entao
         assertEquals(10, result.size)
         assertTrue(result.any { it.code == 200 })
         assertTrue(result.any { it.code == 404 })
