@@ -48,7 +48,7 @@ Este roadmap é voltado para engenheiros de software que desejam iniciar do zero
 
 ### Leituras
 - GitHub – Best practices for using AI in coding  
-  https://docs.github.com/en/copilot/using-github-copilot/best-practices  
+  https://docs.github.com/en/copilot/get-started/best-practices  
 
 - Practical Prompt Engineering for Developers  
   https://www.freecodecamp.org/news/prompt-engineering-for-developers  
@@ -65,10 +65,10 @@ Este roadmap é voltado para engenheiros de software que desejam iniciar do zero
 
 ### Leituras
 - How AI is transforming code reviews  
-  https://thenewstack.io/how-ai-is-transforming-code-reviews  
+  https://github.blog/ai-and-ml/generative-ai/code-review-in-the-age-of-ai-why-developers-will-always-own-the-merge-button/  
 
 - GitHub – Copilot for Pull Requests  
-  https://github.blog/2023-11-08-github-copilot-for-pull-requests  
+  https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review  
 
 ---
 
@@ -115,23 +115,7 @@ Este roadmap é voltado para engenheiros de software que desejam iniciar do zero
 
 ### Leituras
 - GitHub – Copilot increases developer productivity  
-  https://github.blog/2023-03-22-github-copilot-research  
-
-- McKinsey – The economic potential of generative AI  
-  https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-economic-potential-of-generative-ai  
-
----
-
-## 8. Ferramentas que vale conhecer
-
-- GitHub Copilot  
-  https://github.com/features/copilot  
-
-- Cursor Editor  
-  https://www.cursor.sh  
-
-- JetBrains AI Assistant  
-  https://www.jetbrains.com/ai  
+  https://github.blog/news-insights/product-news/github-copilot-x-the-ai-powered-developer-experience/  
 
 ---
 
