@@ -1,4 +1,4 @@
-# Roadmap de Estudos – GenAI e Prompt Engineering para Desenvolvedores de Software
+# Roadmap de Estudos – GenAI e Prompt Engineering para Engenheiros de Software
 
 Este roadmap é voltado para engenheiros de software que desejam iniciar do zero em IA Generativa e Prompt Engineering, com foco em aplicações práticas no desenvolvimento, revisão de código e geração de pequenos PRs.
 
