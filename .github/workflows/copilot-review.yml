@@ -2,7 +2,7 @@ name: AI-Assisted PR Review
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, ready_for_review]
   pull_request_review_comment:
     types: [created]
 
@@ -194,3 +194,71 @@ jobs:
           echo "   - CodeQL analysis"
           echo "   - Dependency scanning"
           echo "   - SAST tools"
+
+  promote-pr:
+    runs-on: ubuntu-latest
+    name: Promote PR After AI Review Approval
+    needs: [copilot-review, code-quality, security-scan]
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Convert Draft to Ready for Review or Assign Reviewers
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const pull_number = context.payload.pull_request.number;
+
+            // Get current PR details
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number
+            });
+
+            if (pr.data.draft) {
+              // Convert draft PR to ready for review using GraphQL
+              await github.graphql(`
+                mutation($pullRequestId: ID!) {
+                  markPullRequestReadyForReview(input: { pullRequestId: $pullRequestId }) {
+                    pullRequest {
+                      isDraft
+                      title
+                    }
+                  }
+                }
+              `, { pullRequestId: pr.data.node_id });
+
+              console.log(`PR #${pull_number} converted from draft to ready for review.`);
+
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull_number,
+                body: [
+                  '## ✅ AI Review Completed — PR Promoted',
+                  '',
+                  'All automated checks passed successfully. This PR has been automatically',
+                  'converted from **Draft** to **Ready for Review**. 🚀',
+                  '',
+                  '> A human review is still required before merging.',
+                ].join('\n')
+              });
+            } else {
+              // PR is already ready for review — post a completion comment
+              console.log(`PR #${pull_number} is already ready for review. AI review completed.`);
+
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pull_number,
+                body: [
+                  '## ✅ AI Review Completed — Awaiting Human Review',
+                  '',
+                  'All automated checks passed successfully. This PR is **ready for review**. 👀',
+                  '',
+                  '> A human review is still required before merging.',
+                ].join('\n')
+              });
+            }
