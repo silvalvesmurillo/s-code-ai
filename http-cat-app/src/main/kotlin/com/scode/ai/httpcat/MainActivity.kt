@@ -16,53 +16,26 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import io.ktor.client.*
-import io.ktor.client.engine.okhttp.*
+import com.scode.ai.httpcat.signup.SignUpScreen
 import kotlinx.coroutines.launch
 
 /**
- * Main Activity that displays the HTTP Cat status codes in a LazyColumn
+ * Main Activity — entry point of the application.
+ * Currently renders the [com.scode.ai.httpcat.signup.SignUpScreen].
  */
 class MainActivity : ComponentActivity() {
-    
-    private lateinit var httpCatService: HttpCatService
-    private lateinit var httpClient: HttpClient
-    
-    @OptIn(ExperimentalMaterial3Api::class)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        
-        // Initialize HTTP client with OkHttp engine for Android
-        httpClient = HttpClient(OkHttp)
-        httpCatService = HttpCatServiceImpl(httpClient)
-        
+
         setContent {
             HttpCatTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    topBar = {
-                        TopAppBar(
-                            title = { Text(stringResource(R.string.app_name)) },
-                            colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer,
-                                titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
-                            )
-                        )
-                    }
-                ) { paddingValues ->
-                    HttpCatScreen(
-                        service = httpCatService,
-                        modifier = Modifier.padding(paddingValues)
-                    )
+                Scaffold(modifier = Modifier.fillMaxSize()) { paddingValues ->
+                    SignUpScreen(modifier = Modifier.padding(paddingValues))
                 }
             }
         }
-    }
-    
-    override fun onDestroy() {
-        super.onDestroy()
-        httpClient.close()
     }
 }
 

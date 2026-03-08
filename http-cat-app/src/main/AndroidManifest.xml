@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HttpCatApp">
         <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HttpCatApp" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.HttpCatApp">
