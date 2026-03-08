@@ -218,33 +218,54 @@ jobs:
             });
 
             if (pr.data.draft) {
-              // Convert draft PR to ready for review using GraphQL
-              await github.graphql(`
-                mutation($pullRequestId: ID!) {
-                  markPullRequestReadyForReview(input: { pullRequestId: $pullRequestId }) {
-                    pullRequest {
-                      isDraft
-                      title
+              // Try to convert draft PR to ready for review using GraphQL
+              try {
+                await github.graphql(`
+                  mutation($pullRequestId: ID!) {
+                    markPullRequestReadyForReview(input: { pullRequestId: $pullRequestId }) {
+                      pullRequest {
+                        isDraft
+                        title
+                      }
                     }
                   }
-                }
-              `, { pullRequestId: pr.data.node_id });
+                `, { pullRequestId: pr.data.node_id });
 
-              console.log(`PR #${pull_number} converted from draft to ready for review.`);
+                console.log(`PR #${pull_number} converted from draft to ready for review.`);
 
-              await github.rest.issues.createComment({
-                owner,
-                repo,
-                issue_number: pull_number,
-                body: [
-                  '## ✅ AI Review Completed — PR Promoted',
-                  '',
-                  'All automated checks passed successfully. This PR has been automatically',
-                  'converted from **Draft** to **Ready for Review**. 🚀',
-                  '',
-                  '> A human review is still required before merging.',
-                ].join('\n')
-              });
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: pull_number,
+                  body: [
+                    '## ✅ AI Review Completed — PR Promoted',
+                    '',
+                    'All automated checks passed successfully. This PR has been automatically',
+                    'converted from **Draft** to **Ready for Review**. 🚀',
+                    '',
+                    '> A human review is still required before merging.',
+                  ].join('\n')
+                });
+              } catch (error) {
+                console.log(`Could not convert draft PR #${pull_number}: ${error.message}`);
+
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: pull_number,
+                  body: [
+                    '## ✅ AI Review Completed — Manual Promotion Required',
+                    '',
+                    'All automated checks passed successfully.',
+                    'However, the workflow could not automatically convert this PR from **Draft** to **Ready for Review**',
+                    'due to token permission limitations.',
+                    '',
+                    '👉 **Please manually mark this PR as "Ready for Review" when appropriate.**',
+                    '',
+                    '> A human review is still required before merging.',
+                  ].join('\n')
+                });
+              }
             } else {
               // PR is already ready for review — post a completion comment
               console.log(`PR #${pull_number} is already ready for review. AI review completed.`);
