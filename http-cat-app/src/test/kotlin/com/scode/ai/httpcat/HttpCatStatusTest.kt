@@ -41,6 +41,46 @@ class HttpCatStatusTest {
     }
     
     @Test
+    fun `Given informational code When getStatusCategory Then returns Informational`() {
+        // Given
+        val status = HttpCatStatus(100, "https://http.cat/100")
+
+        // When
+        val result = status.getStatusCategory()
+
+        // Then
+        assertEquals("Informational", result)
+    }
+
+    @Test
+    fun `Given success code When getStatusCategory Then returns Success`() {
+        // Given & When & Then
+        assertEquals("Success", HttpCatStatus(200, "url").getStatusCategory())
+        assertEquals("Success", HttpCatStatus(201, "url").getStatusCategory())
+    }
+
+    @Test
+    fun `Given redirection code When getStatusCategory Then returns Redirection`() {
+        assertEquals("Redirection", HttpCatStatus(301, "url").getStatusCategory())
+    }
+
+    @Test
+    fun `Given client error code When getStatusCategory Then returns Client Error`() {
+        assertEquals("Client Error", HttpCatStatus(404, "url").getStatusCategory())
+    }
+
+    @Test
+    fun `Given server error code When getStatusCategory Then returns Server Error`() {
+        assertEquals("Server Error", HttpCatStatus(500, "url").getStatusCategory())
+    }
+
+    @Test
+    fun `Given unknown code When getStatusCategory Then returns Unknown`() {
+        assertEquals("Unknown", HttpCatStatus(600, "url").getStatusCategory())
+        assertEquals("Unknown", HttpCatStatus(0, "url").getStatusCategory())
+    }
+
+    @Test
     fun `HttpCatStatus copy works correctly`() {
         // Given
         val original = HttpCatStatus(200, "https://http.cat/200")
